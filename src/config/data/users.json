@@ -1,0 +1,18 @@
+[
+  {
+    "id": "123",
+    "uuid": "68196ead-d7ae-4f57-b6b6-a52fefd3b618",
+    "firstName": "Heide",
+    "lastName": "Crona",
+    "username": "heide.crona",
+    "password": "4fasdkfjasdlfkajlskfas",
+    "email": "heide.crona@email.com",
+    "avatar": "https://robohash.org/sequiullamomnis.png?size=300x300&set=set1",
+    "subscription": {
+      "plan": "Free Trial",
+      "status": "Active",
+      "payment_method": "Paypal",
+      "term": "Annual"
+    }
+  }
+]
