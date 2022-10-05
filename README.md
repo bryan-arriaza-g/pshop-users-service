@@ -7,7 +7,7 @@
 ```
 docker build . -t pshop-users-service
 
-docker run -p 4000:80 -d pshop-users-service
+docker run -p 4000:8080 -d pshop-users-service
 ```
 
 ### Using
