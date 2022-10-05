@@ -24,7 +24,7 @@ const update = async (userId, user) => {
   }
   const users = await UserRepository.find();
   const userIndex = users.findIndex(usr => usr.id === userId);
-  users[userIndex] = { ...userDb, ...user };
+  users[userIndex] = { ...userDb, ...user, uuid: userDb.uuid };
   const savedUser = await UserRepository.update(users, user);
   return savedUser;
 };

@@ -13,7 +13,7 @@ RUN npm set-script prepare ""
 RUN npm ci --legacy-peer-deps
 # === LOGS ===
 # RUN mkdir /app/logs && chmod 777 /app/logs/
-USER node
+USER root
 # Expose port
 EXPOSE 8080
 # Start server
