@@ -31,4 +31,23 @@ const query = async filename => {
   }
 };
 
-module.exports = { connectDB, query };
+const save = async (filename, data, element) => {
+  const PATH = connectDB(filename);
+  const writeFile = new Promise((resolve, reject) => {
+    fs.writeFile(PATH, JSON.stringify(data), 'utf-8', err => {
+      if (err) {
+        reject(new Error('Database error connection!'));
+      } else {
+        resolve(true);
+      }
+    });
+  });
+  try {
+    await writeFile;
+    return element;
+  } catch (err) {
+    return [];
+  }
+};
+
+module.exports = { connectDB, query, save };

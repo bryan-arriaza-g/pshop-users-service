@@ -1,6 +1,9 @@
 const userDto = (user = {}) => {
-  const { id, firstName, lastName, username, password, email, avatar } = user;
-  return { id, firstName, lastName, username, password, email, avatar };
+  if (Object.keys(user).length > 0) {
+    const { id, firstName, lastName, username, email, avatar, status, password } = user;
+    return { id, firstName, lastName, username, email, avatar, status, password };
+  }
+  return user;
 };
 
 const usersDto = (users = []) => users.map(user => userDto(user));
